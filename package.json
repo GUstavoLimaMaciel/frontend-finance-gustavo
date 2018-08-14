@@ -1,0 +1,32 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Frontend do curso de node com Angular",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "production": "gulp --production"
+  },
+  "author": "Gustavo Maciel Real de Lima",
+  "license": "ISC",
+  "devDependencies": {
+    "admin-lte": "~2.3.11",
+    "angular": "^1.7.2",
+    "angular-animate": "^1.7.2",
+    "angular-toastr": "^2.1.1",
+    "angular-ui-router": "^1.0.18",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifycss": "^1.1.0",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^5.0.0",
+    "gulp-webserver": "^0.9.1",
+    "run-sequence": "^2.2.1"
+  }
+}
