@@ -14,13 +14,8 @@
             $http.get(url + '?skip=' + (( page - 1 ) * 10) + '&limit=10' ).then(function(response){
                 self.billingCycle = {
                     credits: [{
-                        name: undefined,
-                        value: undefined
                     }], 
                     debts: [{
-                        name: undefined,
-                        value: undefined,
-                        status:undefined
                     }]
                 };
                 self.calculateValues();
@@ -51,15 +46,10 @@
             self.billingCycle = obj;
             if(!self.billingCycle.credits.length){
                 self.billingCycle.credits = [{
-                    name: undefined,
-                    value: undefined
                 }]; 
             }
             if(!self.billingCycle.debts.length){
                 self.billingCycle.debts = [{
-                    name: undefined,
-                    value: undefined,
-                    status:undefined
                 }];
             }
             self.calculateValues();
@@ -71,15 +61,10 @@
             self.billingCycle = obj;
             if(!self.billingCycle.credits.length){
                 self.billingCycle.credits = [{
-                    name: undefined,
-                    value: undefined
                 }]; 
             }            
             if(!self.billingCycle.debts.length){
                 self.billingCycle.debts = [{
-                    name: undefined,
-                    value: undefined,
-                    status:undefined
                 }];
             }
             self.calculateValues();
@@ -108,8 +93,6 @@
 
         self.addCredit = function(index){
             self.billingCycle.credits.splice(index + 1, 0, {
-                name: undefined,
-                value: undefined
             });
             self.calculateValues();
         };
@@ -131,9 +114,6 @@
 
         self.addDebt = function(index){
             self.billingCycle.debts.splice(index + 1, 0, {
-                name: undefined,
-                value: undefined,
-                status:undefined
             });
             self.calculateValues();
         };
