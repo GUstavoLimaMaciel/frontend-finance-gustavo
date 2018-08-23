@@ -1,13 +1,13 @@
 (function(){
     angular.module('primeiroApp')
     .controller('BillingCycleCtrl',[
-        '$http', 'msg', 'tabs', '$location',
+        '$http', 'msg', 'tabs', '$location', 'consts',
         BillingCycleController
     ]);
 
-    function BillingCycleController($http, msg, tabs, $location){
+    function BillingCycleController($http, msg, tabs, $location, consts){
         const self = this;
-        const url = 'http://localhost:3003/api/billingCycles';
+        const url = consts.apiUrl + '/billingCycles';
 
         self.refresh = function(){
             const page = parseInt($location.search().page) || 1;

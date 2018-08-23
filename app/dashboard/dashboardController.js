@@ -1,11 +1,11 @@
 (function(){
     angular.module('primeiroApp')
-    .controller('DashboardCtrl',['$http',DashboardController])
+    .controller('DashboardCtrl',['$http', 'consts',DashboardController])
     
-    function DashboardController($http){
+    function DashboardController($http, consts){
         const self = this; 
         function getSummary(){
-            const url = 'http://localhost:3003/api/billingSummary';
+            const url = consts.apiUrl + '/billingSummary';
             $http.get(url).then(function(response){
                 self.credit = response.data.credit;
                 self.debt = response.data.debt;
